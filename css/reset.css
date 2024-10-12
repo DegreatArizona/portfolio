@@ -1,0 +1,168 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:secondary;
+    width:100%;
+    height: 100vh;
+    overflow-x:hidden;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+a{
+    text-decoration:none;
+}
+
+:root{
+    --black:rgb(0, 0, 0);
+    --dark-chocolate:#990000;
+    --light-chocolate:#CC3300;
+    --chocolate:#ff6666;
+    --deem-cream:#ffcc99;
+    --white:#ffffff;
+    --light-white:rgb(253, 247, 247);;
+    --gold:#cc7244;
+    --light-gold:#e3ac91;
+    --gradient-light:linear-gradient(270deg, #ffcc99, #ffffff);
+    --gradient:linear-gradient(270deg, #990000, #cc7244);
+    --dark-gradient:linear-gradient(90deg, #990000, #000000);
+    --box-border:2px 2px 15px 2px rgba(0, 0, 0, 0.143);
+    --transition:0.4s ease-in-out;
+    --glass-gradient:linear-gradient(110deg, #ffcc990f, rgba(243, 246, 199, 0.114));
+
+
+/*======== FONT SIZE DEFINE=============*/
+--small:20px;
+--smaller:18px;
+--small-big:22px;
+--big:30px;
+--bigger:50px;
+--h1:55px;
+--paragraph: 15px;
+
+}
+
+
+/*======== FONT FAMILY STYLE==============*/
+@font-face {
+    font-family:primary;
+    src: url(/fonts/poppins/Poppins-Light.ttf);
+    font-weight:bold;
+  }
+
+@font-face {
+    font-family: primary-bold;
+    src: url(/fonts/poppins/Poppins-Bold.ttf);
+    font-weight:bold;
+  }
+
+  @font-face {
+    font-family: secondary;
+    src: url(/fonts/poppins/Poppins-Black.ttf);
+    font-weight:bold;
+  }
+
+  @font-face {
+    font-family: tertiary;
+    src: url(/fonts/tt_octosquares/TT\ Octosquares\ Trial\ Black.ttf);
+    font-weight:bold;
+  }
+
+  /*======== BUTTON STYLE==============*/
+.btn-style-1{
+  background: var(--gradient);
+  padding: 20px 30px;
+  color: white;
+  border-radius:30px;
+  box-shadow:var(--box-border);
+  transition:var(--transition);
+}
+
+.btn-style-1:hover{
+  background:var(--gradient);
+  letter-spacing:5px;
+  box-shadow:none;
+}
+
+
+img{
+  max-width: 100%;
+  max-height: auto;
+}
+
+.btn{
+  font-size:var(--small);
+  color:var(--chocolate);
+  padding:20px 50px;
+  background: var(--black);
+  margin-top: 150px;
+  transition:var(--transition);
+}
+
+.btn:hover{
+  font-size:var(--small-big);
+  background:var(--gradient);
+  color:var(--white);
+  box-shadow:var(--box-border);
+}
+
+.btn-2{
+  font-size:var(--small-big);
+  background:var(--gradient);
+  color:var(--chocolate);
+  padding:20px 50px;
+  margin-top: 150px;
+  transition:var(--transition);
+}
+
+.btn-2:hover{
+  font-size:var(--small);
+  background: var(--black);
+  color:var(--white);
+}
+
+
+.btn-container{
+  padding-top: 30px;
+}
+
+
+.design-container{
+  background:var(--deem-cream);
+  height:10vh;
+  border-radius:0% 0% 100% 100%;
+  margin:0px;
+}
+
+.design-container-2{
+  background:var(--dark-gradient);
+  height:10vh;
+  border-radius:100% 100% 0% 0%;
+  margin:0px;
+}
+
+
+  /*======== ANIMATION DESIGNS==============*/
+  .scroll-container{
+    height:1px;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    background-color:var(--chocolate);
+    width: 100%;
+    scale: 0 1;
+    transform-origin:left;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll(Y);
+    transition:var(--transition);
+  }
+
+  @keyframes scroll-watcher {
+    to {scale: 1 1;
+        height:10px;
+        background: var(--gradient);
+    };
+  }
